@@ -9,7 +9,6 @@ const { schemas } = require("../../models/user");
 const router = express.Router();
 
 router.post("/register", validateBody(schemas.registerSchema), ctrl.register);
-
 router.get("/verify/:verificationCode", ctrl.verify);
 
 router.post(
